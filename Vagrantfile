@@ -1,4 +1,4 @@
-Vagarant.configure("2") do |config|
+Vagrant.configure("2") do |config|
 
 config.vm.provision "shell", inline: <<-SHELL
         
@@ -7,7 +7,7 @@ sudo apt-get update
       SHELL
 
 
-config.vm.define "box1" do |box|
+config.vm.define "box1" do |box1|
 
 
     box1.vm.box="ubuntu/trusty64"
@@ -25,7 +25,7 @@ config.vm.define "box1" do |box|
 
   end
 
-config.vm.define "box2" do |box|
+config.vm.define "box2" do |box2|
 
     box2.vm.box="ubuntu/xenial64"  
 
